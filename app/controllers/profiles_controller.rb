@@ -1,8 +1,5 @@
 class ProfilesController < ApplicationController
-  before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
-  # GET /profiles
-  # GET /profiles.json
   def index
     @profiles = Profile.all
   end
@@ -10,12 +7,13 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
+    @profile = Profile.where(user_id: current_user.id).first
   end
 
   # GET /profiles/new
   def new
-    @user = Users.find(params[:id])
-    @profile = @user.profiles.build
+    # @user = Users.find(params[:id])
+    # @profile = @user.profiles.build
   end
 
   # GET /profiles/1/edit
@@ -25,18 +23,21 @@ class ProfilesController < ApplicationController
   # POST /profiles
   # POST /profiles.json
   def create
-    @user = Users.find(params[:id])
-    @profile = @user.profiles.build(params[rental])
+    profile = Profile.new(
+    user_id: current_user.id)
+    profile.save
+    render('created')
+      # if @profile.save
+      #   format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
+      #   format.json { render :show, status: :created, location: @profile }
+      # else
+      #   format.html { render :new }
+      #   format.json { render json: @profile.errors, status: :unprocessable_entity }
+      # end
+  end
 
-    respond_to do |format|
-      if @profile.save
-        format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
-        format.json { render :show, status: :created, location: @profile }
-      else
-        format.html { render :new }
-        format.json { render json: @profile.errors, status: :unprocessable_entity }
-      end
-    end
+  def view
+    # @profile = Profiles.where(user_id: current_user.id).first
   end
 
   # PATCH/PUT /profiles/1
@@ -65,9 +66,9 @@ class ProfilesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_profile
-      @profile = Profile.find(params[:id])
-    end
+    # def set_profile
+    #   @profile = Profiles.find(params[:id])
+    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params

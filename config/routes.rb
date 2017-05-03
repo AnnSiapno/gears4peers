@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'welcome/index'
   root 'welcome#index'
+  get 'profiles/view'
+  get 'profiles/create_page'
 
 end
