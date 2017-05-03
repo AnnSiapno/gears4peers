@@ -1,1 +1,5 @@
-<%= render 'layouts/static_landing_page' %>
+<% if user_signed_in? %>
+  <%= render 'layouts/home' %>
+<% else %>
+  <%= render 'layouts/static_landing_page' %>
+<% end %>

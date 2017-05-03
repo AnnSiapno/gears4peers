@@ -35,10 +35,7 @@ class ProfilesController < ApplicationController
       #   format.json { render json: @profile.errors, status: :unprocessable_entity }
       # end
   end
-
-  def view
-    @profile = Profiles.where(user_id: current_user.id).first
-  end
+  
 
   # PATCH/PUT /profiles/1
   # PATCH/PUT /profiles/1.json
