@@ -23,9 +23,9 @@ class ProfilesController < ApplicationController
   # POST /profiles
   # POST /profiles.json
   def create
-    profile = Profile.new(
-    user_id: current_user.id)
-    profile.save
+    @profile = Profile.new(profile_params)
+    @profile.user_id = current_user.id
+    @profile.save
     render('created')
       # if @profile.save
       #   format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
@@ -37,7 +37,7 @@ class ProfilesController < ApplicationController
   end
 
   def view
-    # @profile = Profiles.where(user_id: current_user.id).first
+    @profile = Profiles.where(user_id: current_user.id).first
   end
 
   # PATCH/PUT /profiles/1
