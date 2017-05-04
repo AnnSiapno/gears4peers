@@ -1,7 +1,7 @@
 class CreateListings < ActiveRecord::Migration[5.0]
   def change
     create_table :listings do |t|
-      t.integer :host_id
+      t.integer :owner, foreign_key: {to_table: :users}
       t.string :title
       t.decimal :price
       t.text :description

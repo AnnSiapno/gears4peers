@@ -17,7 +17,7 @@ class ListingsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create listing" do
     assert_difference('Listing.count') do
-      post listings_url, params: { listing: { address: @listing.address, city: @listing.city, country: @listing.country, description: @listing.description, host_id: @listing.host_id, latitude: @listing.latitude, longitude: @listing.longitude, price: @listing.price, state: @listing.state, title: @listing.title } }
+      post listings_url, params: { listing: { address: @listing.address, city: @listing.city, country: @listing.country, description: @listing.description, owner: @listing.owner, latitude: @listing.latitude, longitude: @listing.longitude, price: @listing.price, state: @listing.state, title: @listing.title } }
     end
 
     assert_redirected_to listing_url(Listing.last)
@@ -34,7 +34,7 @@ class ListingsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update listing" do
-    patch listing_url(@listing), params: { listing: { address: @listing.address, city: @listing.city, country: @listing.country, description: @listing.description, host_id: @listing.host_id, latitude: @listing.latitude, longitude: @listing.longitude, price: @listing.price, state: @listing.state, title: @listing.title } }
+    patch listing_url(@listing), params: { listing: { address: @listing.address, city: @listing.city, country: @listing.country, description: @listing.description, owner: @listing.owner, latitude: @listing.latitude, longitude: @listing.longitude, price: @listing.price, state: @listing.state, title: @listing.title } }
     assert_redirected_to listing_url(@listing)
   end
 

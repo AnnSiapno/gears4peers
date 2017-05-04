@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20170504045614) do
 
   create_table "listings", force: :cascade do |t|
-    t.integer  "host_id"
+    t.integer  "owner"
     t.string   "title"
     t.decimal  "price"
     t.text     "description"
@@ -31,12 +31,12 @@ ActiveRecord::Schema.define(version: 20170504045614) do
     t.integer  "user_id"
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "avatar_src"
     t.string   "address"
     t.string   "city"
     t.string   "country"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "avatar"
   end
 
   create_table "users", force: :cascade do |t|
