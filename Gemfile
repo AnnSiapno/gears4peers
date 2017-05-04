@@ -5,7 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+# Images upload
+gem 'carrierwave', '~> 1.1'
 # User authentication
 gem 'devise', '~> 4.2', '>= 4.2.1'
 # For styling
