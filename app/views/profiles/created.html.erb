@@ -1,2 +1,5 @@
 <h1>Profile created!</h1>
-<%= link_to "Done", @profile %>
+<%= link_to "Done", profile_path(current_user.id) %>
+
+
+<%= render 'layouts/footer' %>
