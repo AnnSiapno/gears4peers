@@ -1,10 +1,14 @@
 class ListingsController < ApplicationController
-  before_action :set_listing, only: [:show, :edit, :update, :destroy]
+  # before_action :set_listing, only: [:show, :edit, :update, :destroy]
 
   # GET /listings
   # GET /listings.json
   def index
     @listings = Listing.all
+  end
+
+  def yours
+    @your_listings = Listing.where(owner: current_user)
   end
 
   # GET /listings/1
@@ -25,7 +29,7 @@ class ListingsController < ApplicationController
   # POST /listings.json
   def create
     @listing = Listing.new(listing_params)
-    @listing.owner = current_user
+    @listing.owner_id = current_user.id
 
     respond_to do |format|
       if @listing.save
@@ -70,6 +74,6 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:owner, :title, :price, :description, :longitude, :latitude, :address, :city, :state, :country)
+      params.require(:listing).permit(:owner_id, :title, :price, :description, :longitude, :latitude, :address, :city, :state, :country)
     end
 end

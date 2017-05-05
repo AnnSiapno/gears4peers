@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20170505014724) do
 
   create_table "listings", force: :cascade do |t|
-    t.integer  "owner"
+    t.integer  "owner_id"
     t.string   "title"
     t.decimal  "price"
     t.text     "description"
