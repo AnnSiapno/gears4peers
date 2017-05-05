@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170504045614) do
+ActiveRecord::Schema.define(version: 20170505014724) do
 
   create_table "listings", force: :cascade do |t|
     t.integer  "owner"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20170504045614) do
     t.string   "country"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text     "bio"
   end
 
   create_table "users", force: :cascade do |t|
