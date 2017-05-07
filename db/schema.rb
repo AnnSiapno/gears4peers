@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170505014724) do
+ActiveRecord::Schema.define(version: 20170507014749) do
 
   create_table "listings", force: :cascade do |t|
     t.integer  "owner_id"
@@ -31,13 +31,16 @@ ActiveRecord::Schema.define(version: 20170505014724) do
     t.integer  "user_id"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "avatar_src"
     t.string   "address"
     t.string   "city"
     t.string   "country"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.text     "bio"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

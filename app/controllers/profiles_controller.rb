@@ -6,7 +6,7 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1
   # GET /profiles/1.json
-  def show 
+  def show
     @profile = Profile.where(user_id: current_user.id).first
   end
 
@@ -69,6 +69,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:user_id, :first_name, :last_name, :avatar_src, :address, :city, :country)
+      params.require(:profile).permit(:user_id, :avatar, :first_name, :last_name, :address, :city, :country)
     end
 end

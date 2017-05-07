@@ -6,7 +6,9 @@ git_source(:github) do |repo_name|
 end
 
 # Images upload
-gem 'carrierwave', '~> 1.1'
+gem 'paperclip', '~> 5.1'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem 'aws-sdk', '< 2.0'
 # User authentication
 gem 'devise', '~> 4.2', '>= 4.2.1'
 # For styling
