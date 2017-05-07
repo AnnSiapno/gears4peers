@@ -1,0 +1,70 @@
+<%= form_for @profile do |f| %>
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+
+      <ul>
+      <% @profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
+  </div>
+
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+<% if false %>
+<%= form_tag profile_edit_path, :method => "POST" do %>
+  <p>
+    <h2>First Name: </h2>
+    <%= text_field_tag :first_name, params[:first_name],placeholder: @profile.first_name %>
+    <h2>Last Name:</h2>
+    <%= text_field_tag :last_name, params[:last_name],placeholder: @profile.last_name %>
+    <h2>Bio</h2>
+    <%= text_area_tag :bio, params[:bio],rows: "5", cols: '100'%>
+    <h2>Address:</h2>
+    <%= text_field_tag :address, params[:address],placeholder: @profile.address %>
+    <h2>City:</h2>
+    <%= text_field_tag :city, params[:city],placeholder: @profile.city %>
+    <h2>Country:</h2>
+    <%= text_field_tag :country, params[:country],placeholder: @profile.country %>
+    <br>
+    <%= submit_tag "Change", :name => nil %>
+    <%= link_to "Cancel", {action: 'view'} %>
+  </p>
+  <% end %>
+  <% end %>
