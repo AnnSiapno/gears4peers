@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   root 'welcome#index'
   get 'profiles/create_page'
-  # get 'listings/view_yours'
+  get 'home/search_results'
+  get 'home/search'
 
 end
