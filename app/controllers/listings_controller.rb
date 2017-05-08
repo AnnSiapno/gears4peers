@@ -19,10 +19,12 @@ class ListingsController < ApplicationController
   # GET /listings/new
   def new
     @listing = Listing.new
+    @countries =  ISO3166::Country.codes.map { |country_code| ISO3166::Country.new(country_code) }
   end
 
   # GET /listings/1/edit
   def edit
+    @countries =  ISO3166::Country.codes.map { |country_code| ISO3166::Country.new(country_code) }
   end
 
   # POST /listings

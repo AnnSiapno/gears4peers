@@ -52,8 +52,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :country %>
-    <%= f.text_field :country %>
+    <%= f.label :country_code, 'Country' %>
+    <%= f.collection_select :country_code, @countries, :alpha2, :name %>
   </div>
 
   <div class="actions">

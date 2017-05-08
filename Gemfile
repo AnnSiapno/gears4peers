@@ -6,6 +6,9 @@ git_source(:github) do |repo_name|
 end
 
 
+
+gem 'countries', :require => 'countries/global'
+# Payment
 gem 'stripe'
 # Images upload
 gem 'paperclip', '~> 5.1'
