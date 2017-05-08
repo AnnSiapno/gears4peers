@@ -53,7 +53,7 @@
 
   <div class="field">
     <%= f.label :country_code, 'Country' %>
-    <%= f.collection_select :country_code, @countries, :alpha2, :name %>
+    <%= f.collection_select :country_code, @countries, :alpha2, :name, :prompt => 'Please select' %>
   </div>
 
   <div class="actions">
