@@ -1,7 +1,9 @@
-<footer class="footer">
-  <ul class="nav navbar-nav navbar-right">
-    <li><%= link_to "Home", root_path %></li>
-    <li><%= link_to "Explore", home_search_path %></li>
-    <li><%= link_to "View Profile", profile_path(current_user.id) %></li>
-  </ul>
+<footer class="navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Explore", home_search_path %></li>
+      <li><%= link_to "View Profile", profile_path(current_user.id) %></li>
+    </ul>
+  </div>
 </footer>
