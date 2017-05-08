@@ -1,5 +1,7 @@
 class Listing < ApplicationRecord
   belongs_to :owner, class_name: 'User'
+  geocoded_by :full_address
+  after_validation :geocode, :if => :address_changed?
 
   def listing_params
     params.require(:listing).permit(:country_code)

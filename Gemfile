@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 
-
+gem 'geocoder'
 gem 'countries', :require => 'countries/global'
 # Payment
 gem 'stripe'
