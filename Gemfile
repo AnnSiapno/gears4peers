@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
+gem 'stripe'
 # Images upload
 gem 'paperclip', '~> 5.1'
 gem 'figaro', '~> 1.1', '>= 1.1.1'

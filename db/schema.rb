@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170507014749) do
+ActiveRecord::Schema.define(version: 20170508010443) do
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer  "renter_id"
+    t.integer  "listing_id"
+    t.string   "stripe_charge_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["listing_id"], name: "index_bookings_on_listing_id"
+    t.index ["renter_id"], name: "index_bookings_on_renter_id"
+  end
 
   create_table "listings", force: :cascade do |t|
     t.integer  "owner_id"

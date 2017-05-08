@@ -43,6 +43,8 @@
   <%= @listing.country %>
 </p>
 
+<%= link_to 'Book now', new_booking_path(listing: @listing.id) %>
+
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
 <%= link_to 'Back', yours_listings_path %>
 

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  renter: one
+  listing: one
+  stripe_charge_id: MyString
+
+two:
+  renter: two
+  listing: two
+  stripe_charge_id: MyString
