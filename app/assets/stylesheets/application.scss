@@ -16,3 +16,19 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+$text-color: #161616;
+$accent-color: #B32117;
+$white: #EAEAEA;
+
+body {
+  text-align: center;
+  color: $text-color;
+}
+
+a.btn,
+.btn-primary {
+  background-color: $accent-color;
+  border-color: $accent-color;
+  color: $white;
+}
