@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 
+# Maps
+gem 'gmaps4rails'
 gem 'geocoder'
 gem 'countries', :require => 'countries/global'
 # Payment
