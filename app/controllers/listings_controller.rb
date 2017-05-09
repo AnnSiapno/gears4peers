@@ -14,6 +14,11 @@ class ListingsController < ApplicationController
 
   def yours
     @your_listings = Listing.where(owner: current_user)
+    @hash = Gmaps4rails.build_markers(@your_listings) do |listing, marker|
+      marker.lat listing.latitude
+      marker.lng listing.longitude
+      marker.infowindow listing.title
+    end
   end
 
   # GET /listings/1
