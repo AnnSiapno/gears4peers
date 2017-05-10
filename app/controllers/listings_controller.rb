@@ -50,6 +50,13 @@ class ListingsController < ApplicationController
 
     respond_to do |format|
       if @listing.save
+
+        if params[:images]
+          params[:images].each { |image|
+            @listing.images_listings.create(image: image)
+          }
+        end
+
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
         format.json { render :show, status: :created, location: @listing }
       else

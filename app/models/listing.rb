@@ -1,5 +1,6 @@
 class Listing < ApplicationRecord
   belongs_to :owner, class_name: 'User'
+  has_many :images_listings, :dependent => :destroy
   geocoded_by :full_address
   after_validation :geocode, :if => :address_changed?
 

@@ -1,4 +1,4 @@
-<%= form_for(listing) do |f| %>
+<%= form_for @listing, :html => { :class => 'form-horizontal', multipart: true } do |f| %>
   <% if listing.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
@@ -44,6 +44,13 @@
   <div class="field">
     <%= f.label :country_code, 'Country' %>
     <%= f.collection_select :country_code, @countries, :alpha2, :name, :prompt => 'Please select' %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :images_listings, :class => 'control-label' %>
+    <div class="controls">
+      <%= file_field_tag "images[]", type: :file, multiple: true %>
+    </div>
   </div>
 
   <div class="actions">
