@@ -17,13 +17,23 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/**** Variables ****/
+
 $text-color: #161616;
 $accent-color: #B32117;
 $white: #EAEAEA;
 
+
+/***** General *****/
+
 body {
   text-align: center;
   color: $text-color;
+}
+
+a:hover {
+  color: $accent-color;
+  background-color: transparent;
 }
 
 a.btn,
@@ -33,6 +43,22 @@ a.btn,
   color: $white;
 }
 
+/*** Footer ***/
+
+footer {
+  margin-top: 50px; 
+}
+
+/***** Listing Views *****/
+
 div.map {
   margin: 0 auto;
+}
+
+table {
+  margin: 0 auto;
+}
+
+th {
+  text-align: center;
 }
