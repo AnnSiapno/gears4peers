@@ -24,6 +24,7 @@ class ListingsController < ApplicationController
   # GET /listings/1
   # GET /listings/1.json
   def show
+    @display_image = @listing.images_listings.first
     @hash = Gmaps4rails.build_markers(@listing) do |listing, marker|
       marker.lat listing.latitude
       marker.lng listing.longitude

@@ -6,6 +6,8 @@
   <%= @listing.title %>
 </h1>
 
+<%= image_tag @display_image.image(:medium) %>
+
 <p>
   <strong>Owned by:</strong>
   <%= @listing.owner.profile.first_name %>
