@@ -13,10 +13,10 @@ gem 'gmaps4rails'
 gem 'geocoder'
 gem 'countries', :require => 'countries/global'
 # Payment
+gem 'figaro'
 gem 'stripe'
 # Images upload
 gem 'paperclip', '~> 5.1'
-gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'aws-sdk', '< 2.0'
 # User authentication
 gem 'devise', '~> 4.2', '>= 4.2.1'

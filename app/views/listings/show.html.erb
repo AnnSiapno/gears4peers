@@ -46,6 +46,12 @@
 </p>
 
 
+<% if @listing.owner != current_user %>
+  <%= link_to 'Book now', new_booking_path(listing: @listing.id) %>
+<% else %>
+  <%= link_to 'Edit', edit_listing_path(@listing) %>
+<% end %>
+
 
 
 <div class="map"  style='width: 800px;'>
@@ -60,12 +66,6 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
   handler.fitMapToBounds();
 });
 </script>
-
-<% if @listing.owner == current_user %>
-  <%= link_to 'Book now', new_booking_path(listing: @listing.id) %>
-<% else %>
-  <%= link_to 'Edit', edit_listing_path(@listing) %>
-<% end %>
 
 
 <%= render 'layouts/footer' %>

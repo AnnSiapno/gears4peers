@@ -1,12 +1,13 @@
-<h1>All Conversations</h1>
+<h1>Inbox</h1>
 
-<% @conversations.each do |conversation| %>
-  <div>
-    <%= link_to conversation.subject, conversation_path(conversation) %>
-  </div>
+<% if @conversations.empty? %>
+  <h4>Your inbox is empty</h4>
+<% else %>
+  <% @conversations.each do |conversation| %>
+    <div>
+      <%= link_to conversation.subject, conversation_path(conversation) %>
+    </div>
+  <% end %>
 <% end %>
-
-<%= link_to "Create a new conversation", new_conversation_path %>
-
 
 <%= render 'layouts/footer' %>
