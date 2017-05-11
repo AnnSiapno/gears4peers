@@ -7,6 +7,7 @@
 <% if @results.empty? %>
   <p> No results found  </p>
 <% else %>
+  <p class="results-count"><%= @results.count %> Results Found</p>
   <div class="row">
     <div class="col-md-6">
       <% @results.each do |listing| %>
