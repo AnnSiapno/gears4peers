@@ -99,8 +99,6 @@ class ImageslistingsController < ApplicationController
   end
 
 
-  end
-
   private
 
   def images_listing_params
