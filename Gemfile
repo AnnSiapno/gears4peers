@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 
+# Messaging
+gem 'mailboxer'
 # Maps
 gem 'gmaps4rails'
 gem 'geocoder'

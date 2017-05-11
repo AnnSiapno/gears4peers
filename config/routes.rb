@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   resources :bookings
+  resources :conversations do
+    resources :messages
+  end
   resources :listings do
     collection do
       get :yours
