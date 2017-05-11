@@ -12,6 +12,7 @@
   <strong>Owned by:</strong>
   <%= @listing.owner.profile.first_name %>
   <%= @listing.owner.profile.last_name %>
+  <%= link_to "Send a message", new_conversation_path(:user => @listing.owner.id) %>
 </p>
 
 <p>

@@ -1,4 +1,5 @@
 class ConversationsController < ApplicationController
+  #before_action :user_authenticated!
 
   def index
     @conversations = current_user.mailbox.conversations
@@ -9,13 +10,13 @@ class ConversationsController < ApplicationController
   end
 
   def new
-    @recipients = User.all - [current_user]
+    @user = User.find(params[:user])
   end
 
   def create
-    recipient = User.find(params[:user_id])
-    receipt = current_user.send_message(recipient, params[:body], params[:subject])
-    redirect_to conversation_path(receipt.conversation)
+    @recipient = User.find(params[:user])
+    receipt = current_user.send_message(@recipient, params[:body], params[:subject])
+    redirect_to conversation_path(receipt.notification.conversation)
   end
 
 end
