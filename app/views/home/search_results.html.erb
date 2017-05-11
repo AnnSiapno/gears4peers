@@ -2,46 +2,36 @@
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 
-<h1>Search Results</h1>
+<h1 class="margin-bottom">Search Results</h1>
 
 <% if @results.empty? %>
   <p> No results found  </p>
 <% else %>
-  <table>
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Price</th>
-        <th>Description</th>
-        <th>Address</th>
-        <th>City</th>
-        <th>State</th>
-        <th>Country</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
+  <div class="row">
+    <div class="col-md-6">
       <% @results.each do |listing| %>
-        <tr>
-          <td><%= listing.title %></td>
-          <td><%= listing.price %></td>
-          <td><%= listing.description %></td>
-          <td><%= listing.address %></td>
-          <td><%= listing.city %></td>
-          <td><%= listing.state %></td>
-          <td><%= listing.country %></td>
-          <td><%= link_to 'Show', listing %></td>
-        </tr>
+        <div class="listing row">
+          <div class="col-md-7">
+            <%= image_tag listing.images_listings.first.image, :class => "list_img" %>
+          </div>
+          <div class="col-md-5 text">
+            <h4><%= listing.title %></h4>
+            <p><%= listing.description %></p>
+            <p><%= listing.address %>, <%= listing.city %>, <%= listing.state %>, <%= listing.country %></p>
+            <strong>$<%= listing.price %>0 <%= link_to 'View', listing %></strong>
+          </div>
+        </div>
       <% end %>
-    </tbody>
-  </table>
+    </div>
+
+    <div class="col-md-6">
+      <div class="map" style='width: 650px; margin: 0;'>
+        <div id="map" style='width: 650px; height: 500px;'></div>
+      </div>
+    </div>
+  </div>
+
 <% end %>
-
-
-<div class="map" style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
-</div>
 
 <script type="text/javascript">
 handler = Gmaps.build('Google');

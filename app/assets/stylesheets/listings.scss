@@ -1,3 +1,26 @@
 // Place all the styles related to the Listings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/**** Variables ****/
+
+$text-color: #161616;
+$accent-color: #B32117;
+$white: #EAEAEA;
+
+.list_img {
+  max-width: 85%;
+}
+
+div.listing {
+  margin-bottom: 10px;
+
+  .col-md-7{
+    text-align: right;
+  }
+
+  .text {
+    text-align: left;
+  }
+
+}

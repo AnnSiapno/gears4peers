@@ -31,6 +31,10 @@ body {
   color: $text-color;
 }
 
+h1.margin-bottom {
+  margin-bottom: 35px; 
+}
+
 a:hover {
   color: $accent-color;
   background-color: transparent;
@@ -46,7 +50,7 @@ a.btn,
 /*** Footer ***/
 
 footer {
-  margin-top: 50px; 
+  margin-top: 50px;
 }
 
 /***** Listing Views *****/
