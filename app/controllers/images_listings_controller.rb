@@ -18,8 +18,6 @@ class ImageslistingsController < ApplicationController
     end
   end
 
-  # GET /pictures/new
-  # GET /pictures/new.json
   def new
     @listing = Listing.find(params[:listing_id])
     @images_listing = @listing.images_listings.build
@@ -79,5 +77,4 @@ private
   def images_listing_params
     params.require(:images_listing).permit(:listing_id, :image)
   end
-end
 end
