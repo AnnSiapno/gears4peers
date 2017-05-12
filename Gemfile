@@ -16,7 +16,7 @@ gem 'countries', :require => 'countries/global'
 gem 'figaro'
 gem 'stripe'
 # Images upload
-gem 'paperclip', '~> 5.1'
+gem "paperclip",'4.3.6'
 gem 'aws-sdk', '< 2.0'
 # User authentication
 gem 'devise', '~> 4.2', '>= 4.2.1'
