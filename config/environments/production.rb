@@ -1,6 +1,6 @@
 Rails.application.configure do
 
-config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+config.action_mailer.default_url_options = { :host => 'https://quiet-dawn-96828.herokuapp.com' }
 
     config.paperclip_defaults = {
     storage: :s3,
