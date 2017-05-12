@@ -1,9 +1,4 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
+
 development:
   adapter: postgresql
   encoding: unicode
@@ -11,7 +6,7 @@ development:
   pool: 5
   username: annsiapno
   password:
-  host: localhost
+  host: herokuapp
   port: 5432
 
 # Warning: The database defined as "test" will be erased and
@@ -24,7 +19,7 @@ test:
   pool: 5
   username: annsiapno
   password:
-  host: localhost
+  host: herokuapp
   port: 5432
 
 production:
@@ -34,5 +29,5 @@ production:
   pool: 5
   username: annsiapno
   password:
-  host: localhost
+  host: herokuapp
   port: 5432
