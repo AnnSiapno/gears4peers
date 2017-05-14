@@ -83,4 +83,5 @@
   * Completed
 ### Database design
 ![Alt text](https://github.com/AnnSiapno/sports_rental/blob/master/images/database-design.png "Database design")
-## Wireframes 
+## Wireframes
+![Alt text](https://github.com/AnnSiapno/sports_rental/blob/master/images/home-view-1-app-view.png "Homepage slider 1")![Alt text](https://github.com/AnnSiapno/sports_rental/blob/master/images/home-view-2-app-view.png "Homepage slider 2")
