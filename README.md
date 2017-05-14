@@ -12,6 +12,20 @@
   * Strongest Market: Traveling sports enthusiasts
     * Why? - They will no longer need to bring their sports equipment while traveling and are now able to travel light. They are not restricted by work (or study) Monday to Friday and are able to rent the equipment all days of the week.
 
+## Business plan
+### Sources of Profit
+- % of each payment made
+- Ads - for travel (accommodation and flights), tours, classes for the sports
+- Affiliate programs - for any sales for the above
+- Charge listers for a higher insurance plan
+### Marketing strategies
+- Instagram Ads
+- Facebook Ads
+- Referral programs - $10 coupon for each friends referred and $10 off on your friend's first booking
+- Ads on pages that sell these equipments
+- Share links for users with a listing
+
+
 ## Pre-code planning
 ### User Stories
 - As a traveller I want to be able to participate in a particular sport without bringing my own equipment with me while I travel
@@ -67,3 +81,5 @@
 - Uploaded on Heroku
   * 1.5 hrs
   * Completed
+### Database design
+ 
