@@ -86,3 +86,4 @@
 ## Wireframes
 ![Alt text](https://github.com/AnnSiapno/sports_rental/blob/master/images/home.png "Homepage sliders")
 ![Alt text](https://github.com/AnnSiapno/sports_rental/blob/master/images/login,-sign-up-and-profile.png "Log in, sign up and profile view")
+![Alt text](https://github.com/AnnSiapno/sports_rental/blob/master/images/listings-view.png "Listings and listings view")
