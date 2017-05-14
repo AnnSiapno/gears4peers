@@ -82,4 +82,5 @@
   * 1.5 hrs
   * Completed
 ### Database design
-![Alt text](https://github.com/AnnSiapno/sports_rental/blob/master/images/database-design.png "Database design") 
+![Alt text](https://github.com/AnnSiapno/sports_rental/blob/master/images/database-design.png "Database design")
+## Wireframes 
