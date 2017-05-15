@@ -41,7 +41,7 @@
 - As an owner I want to make sure I am compensated if my equipment is damaged
 - As a renter I want to make sure the equipment remains available for my chosen dates
 
-### MVP Features
+### MVP Features (with estimation time and status)
 - User log in, sign up and sign out
   * 1.5 hrs
   * Completed
@@ -87,3 +87,8 @@
 ![Alt text](https://github.com/AnnSiapno/sports_rental/blob/master/images/home.png "Homepage sliders")
 ![Alt text](https://github.com/AnnSiapno/sports_rental/blob/master/images/login,-sign-up-and-profile.png "Log in, sign up and profile view")
 ![Alt text](https://github.com/AnnSiapno/sports_rental/blob/master/images/listings-view.png "Listings and listings view")
+## Tools used
+- Trello
+- DB Designer
+- Illustrator
+- Gems: Devise, Paperclip, Geocoder, Gmaps 4 Rails, Countries, Stripe, AWS-SDK, PG, Figaro
