@@ -2,7 +2,7 @@
   <%= image_tag @profile.avatar(:medium) %>
 
   <h2>
-  <%= @profile.first_name %> <%= @profile.last_name %>
+    <%= @profile.first_name %> <%= @profile.last_name %>
   </h2>
 
   <div>
@@ -25,7 +25,7 @@
     <p>
       <%= @profile.country %>
     </p>
-</div>
+  </div>
 </div>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %>

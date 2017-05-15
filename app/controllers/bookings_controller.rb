@@ -95,6 +95,7 @@ class BookingsController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_booking
       @booking = Booking.find(params[:id])
@@ -103,5 +104,5 @@ class BookingsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def booking_params
       params.require(:booking).permit(:guest_id, :listing_id, :check_in_at, :check_out_at, :guest_count, :stripe_charge_id, :special_requirement)
-    end
+    end  
 end

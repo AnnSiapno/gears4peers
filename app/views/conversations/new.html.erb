@@ -2,19 +2,14 @@
 <h4>To: <%= @user.profile.first_name %></h4>
 
 <%= form_tag conversations_path, method: :post do %>
-
   <%= hidden_field_tag :user, @user.id %>
-
   <div>
     <%= text_field_tag :subject, nil, placeholder: "Subject" %>
   </div>
-
   <div>
     <%= text_area_tag :body, nil, placeholder: "Leave a message" %>
   </div>
-
   <%= submit_tag "Send message" %>
-
 <% end %>
 
 

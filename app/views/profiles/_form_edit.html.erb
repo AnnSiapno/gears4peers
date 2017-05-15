@@ -48,23 +48,23 @@
 
 
 <% if false %>
-<%= form_tag profile_edit_path, :method => "POST" do %>
-  <p>
-    <h2>First Name: </h2>
-    <%= text_field_tag :first_name, params[:first_name],placeholder: @profile.first_name %>
-    <h2>Last Name:</h2>
-    <%= text_field_tag :last_name, params[:last_name],placeholder: @profile.last_name %>
-    <h2>Bio</h2>
-    <%= text_area_tag :bio, params[:bio],rows: "5", cols: '100'%>
-    <h2>Address:</h2>
-    <%= text_field_tag :address, params[:address],placeholder: @profile.address %>
-    <h2>City:</h2>
-    <%= text_field_tag :city, params[:city],placeholder: @profile.city %>
-    <h2>Country:</h2>
-    <%= text_field_tag :country, params[:country],placeholder: @profile.country %>
-    <br>
-    <%= submit_tag "Change", :name => nil %>
-    <%= link_to "Cancel", {action: 'view'} %>
-  </p>
-  <% end %>
+  <%= form_tag profile_edit_path, :method => "POST" do %>
+    <p>
+      <h2>First Name: </h2>
+      <%= text_field_tag :first_name, params[:first_name],placeholder: @profile.first_name %>
+      <h2>Last Name:</h2>
+      <%= text_field_tag :last_name, params[:last_name],placeholder: @profile.last_name %>
+      <h2>Bio</h2>
+      <%= text_area_tag :bio, params[:bio],rows: "5", cols: '100'%>
+      <h2>Address:</h2>
+      <%= text_field_tag :address, params[:address],placeholder: @profile.address %>
+      <h2>City:</h2>
+      <%= text_field_tag :city, params[:city],placeholder: @profile.city %>
+      <h2>Country:</h2>
+      <%= text_field_tag :country, params[:country],placeholder: @profile.country %>
+      <br>
+      <%= submit_tag "Change", :name => nil %>
+      <%= link_to "Cancel", {action: 'view'} %>
+    </p>
+    <% end %>
   <% end %>
